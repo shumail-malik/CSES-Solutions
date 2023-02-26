@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+   int t,count=1;
+   cin>>t;
+   long long int arr[t],pin;
+   for(int i=0;i<t;i++)
+   {
+       cin>>arr[i];
+   }
+   sort(arr, arr + t);
+   pin = arr[0];
+   for(int j=0;j<t;j++)
+   {
+       if(pin!=arr[j])
+       count++;
+       pin = arr[j];
+   }
+   cout<<count;
+   return 0;
+}
